@@ -1,0 +1,175 @@
+
+
+
+/* CSS RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Regole generiche */
+body {
+	padding: 16px;
+	line-height: 1;
+	color: #d4dac2;
+	font-family: 'DotGothic16', sans-serif;
+	background-color: rgba(28, 39, 33, 0.5);
+	background-image: url('images/dungeon-bg.jpg');
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	height: 100vh;
+	text-shadow: 5px 5px #000000;
+}
+
+
+.game-container {
+	width: 484px;
+}
+
+.game-panel{
+	padding-bottom: 15px;
+}
+
+/* Pannello di gioco */
+h1 {
+	font-size: 60px;
+	text-transform: uppercase;
+	padding-bottom:30px ;
+	text-align: center;
+	text-shadow: 0px 0px 52px 15px rgba(0,0,0,1)!important;
+	text-shadow: 0px 0px 52px 15px rgba(0,0,0,1)!important;
+	text-shadow: 0px 0px 52px 15px rgba(0,0,0,1)!important;
+}
+
+p{
+	text-align: center;
+	padding:15px ;
+}
+
+.score {
+	font-size: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Tabellone di gioco */
+
+.game-board {
+	position: relative;
+	border: 10px double #5c675c;
+    padding: 7px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+background-color: #1c2721;
+
+}
+
+.grid {
+	height: 450px;
+	width: 450px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.cell {
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	background-color: rgb(127, 139, 130, 0.5);
+	border:solid 2x white;
+	/* border: 1px dashed black; */
+
+}
+
+.cell-dark {
+	background-color: rgb(92, 103, 92, 0.5);
+
+}
+
+.cell:hover,
+.cell-clicked {
+	background-color: #d4dac2;	
+	-webkit-box-shadow: 0px 0px 52px 15px rgba(212,218,194,1);
+	-moz-box-shadow: 0px 0px 52px 15px rgba(212,218,194,1);
+	box-shadow: 0px 0px 52px 15px rgba(212,218,194,1);
+}
+
+.cell-bomb {
+	background-color: #000000;
+	background-image: url('images/blue.gif');
+	background-size: cover;
+	-webkit-box-shadow: 0px 0px 52px 15px rgba(0,0,0,1)!important;
+	-moz-box-shadow: 0px 0px 52px 15px rgba(0,0,0,1)!important;
+	box-shadow: 0px 0px 52px 15px rgba(0,0,0,1)!important;
+}
+
+.cell-grail {
+	background-image: url('https://giphy.com/embed/ugOMVsKh9pMWxji7w4" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-episode-12-the-office-tv-ugOMVsKh9pMWxji7w4');
+	background-size: cover;
+}
+
+
+
+.cell-clicked,
+.cell-bomb {
+	cursor: not-allowed;
+	-webkit-box-shadow: 0px 0px 52px 15px rgba(212,218,194,1);
+-moz-box-shadow: 0px 0px 52px 15px rgba(212,218,194,1);
+box-shadow: 0px 0px 52px 15px rgba(212,218,194,1);
+	
+}
+
+/* Schermata di fine gioco */
+.end-game-screen {
+	background-color: rgba(28, 39, 33, 0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.end-game-screen.grail {
+background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3hpZzc1djBidnlubXd3azZwcGV6d2Z3ZzRnb3k3Y2x3MHYzdG1zZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ugOMVsKh9pMWxji7w4/giphy.gif');
+	background-size: cover;
+}
+.win {
+	background-color: rgba(78, 241, 187, 0.6);
+}
+
+.end-game-text {
+	font-size: 48px;
+	line-height: 1.2;
+	font-family: 'DotGothic16', sans-serif;
+	margin-bottom: 16px;
+}
+
+button {
+	border: 9px double #d4dac2;
+    font-size: 26px;
+    font-family: 'DotGothic16', sans-serif;
+    text-transform: uppercase;
+    padding: 4px 20px 8px 20px;
+    cursor: pointer;
+    background: #1c2721;
+}
+
+button:hover {
+	background-color: rgb(203, 224, 221);
+	color:  rgb(28, 39, 33);
+}
+
+.hidden {
+	display: none;
+}
